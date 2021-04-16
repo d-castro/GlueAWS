@@ -14,15 +14,7 @@ public class StartWorkflow {
 		GlueClient glueClient = GlueClient.builder().region(region).build();
 
 		startSpecificWorkflow(glueClient, workflowName);
-		glueClient.close();
-
-		final String USAGE = "\n" + "Usage:\n" + "    StartWorkflow " + workflowName +"\n\n" + "Where:\n"
-				+ "    workflowname - the name of the workflow. \n";
-
-		if (args.length != 1) {
-			System.out.println(USAGE);
-			System.exit(1);
-		}
+		glueClient.close();	
 		
 	}
 
